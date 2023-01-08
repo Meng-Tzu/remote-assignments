@@ -72,4 +72,10 @@ main section.intro button {
   border: none;
   padding: 1rem 1.25rem;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    width: 1200px;
+  }
 }/*# sourceMappingURL=style.css.map */
