@@ -36,8 +36,14 @@ header nav ul li a {
   text-decoration: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 main section.welcome {
   background-color: rgb(172, 255, 255);
+  width: 100vw;
   height: 20vh;
   display: flex;
   align-items: center;
@@ -75,7 +81,12 @@ main section.intro button {
 }
 
 @media screen and (min-width: 1200px) {
-  body {
+  section.intro {
     width: 1200px;
+  }
+}
+@media screen and (max-width: 900px) {
+  header div.logo img {
+    width: 7vw;
   }
 }/*# sourceMappingURL=style.css.map */
