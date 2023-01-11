@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(223, 223, 223);
+}
+header div.logo {
+  flex: 5 1 400px;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+header div.logo img {
+  width: 4vw;
+}
+header div.logo h1 {
+  font-size: 1.25rem;
+}
+header nav {
+  flex: 2 1 400px;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+header nav ul li a {
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section.welcome {
+  background-color: rgb(172, 255, 255);
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section.welcome h1 {
+  font-size: 2rem;
+  pointer-events: none;
+}
+main section.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section.intro h2 {
+  margin: 1rem 0rem;
+}
+main section.intro section.group {
+  display: flex;
+  width: 80%;
+  min-height: 50vh;
+  flex-wrap: wrap;
+}
+main section.intro section.group div {
+  background-color: gray;
+  margin: 1rem;
+  padding: 1.25rem;
+  flex: 1 1 400px;
+  text-align: center;
+}
+main section.intro section.more {
+  display: none;
+}
+main section.intro button {
+  background-color: rgb(187, 198, 255);
+  border: none;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  section.intro {
+    width: 1200px;
+  }
+}
+@media screen and (max-width: 900px) {
+  header div.logo img {
+    width: 7vw;
+  }
+}/*# sourceMappingURL=style.css.map */
