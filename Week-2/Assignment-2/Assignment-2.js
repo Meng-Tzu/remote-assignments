@@ -1,9 +1,9 @@
 function avg(data) {
-  price1 = data.products[0].price;
-  price2 = data.products[1].price;
-  price3 = data.products[2].price;
-  total = price1 + price2 + price3;
-  average = total / data.size;
+  let price1 = data.products[0].price;
+  let price2 = data.products[1].price;
+  let price3 = data.products[2].price;
+  let total = price1 + price2 + price3;
+  let average = total / data.size;
   return average;
 }
 
