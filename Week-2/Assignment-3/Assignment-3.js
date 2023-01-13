@@ -10,7 +10,7 @@ function count(input) {
   }
   let str = "{";
   for (let letter in dict) {
-    str = str + letter + ":" + dict[letter] + ", ";
+    str += `${letter}:${dict[letter]}, `;
   }
   str = str.slice(0, -2) + "}";
   return str;
@@ -33,7 +33,7 @@ function groupByKey(input) {
   }
   let str = "{";
   for (let letter in dict) {
-    str = str + letter + ":" + dict[letter] + ", ";
+    str += `${letter}:${dict[letter]}, `;
   }
   str = str.slice(0, -2) + "}";
   return str;
