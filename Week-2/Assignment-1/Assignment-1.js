@@ -1,5 +1,6 @@
+// Find the max value of an array of numbers.
 function max(numbers) {
-  maximum = numbers[0];
+  let maximum = numbers[0];
   for (let i = 1; i < numbers.length; i++) {
     if (numbers[i] > maximum) {
       maximum = numbers[i];
@@ -8,17 +9,19 @@ function max(numbers) {
   return maximum;
 }
 
+// Find the first position of the target number inside an array of numbers.
 function findPosition(numbers, target) {
-  position = -1;
+  let position = -1;
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] == target) {
       position = i;
-      break;
+      break; //一找到target，就不用再繼續往下看
     }
   }
   return position;
 }
 
+// Exercise
 console.log(max([1, 2, 4, 5])); // should print 5
 console.log(max([5, 2, 7, 1, 6])); // should print 7
 

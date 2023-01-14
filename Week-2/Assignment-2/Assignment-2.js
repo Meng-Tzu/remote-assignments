@@ -1,12 +1,15 @@
 function avg(data) {
-  let price1 = data.products[0].price;
-  let price2 = data.products[1].price;
-  let price3 = data.products[2].price;
-  let total = price1 + price2 + price3;
-  let average = total / data.size;
-  return average;
+  let sum = 0;
+
+  for (let i = 0; i < data.size; i++) {
+    let price = data.products[i].price;
+    sum += price;
+  }
+
+  return sum / data.size;
 }
 
+// Exercise
 console.log(
   avg({
     size: 3,
