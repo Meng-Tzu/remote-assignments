@@ -26,7 +26,7 @@ app.get("/data", (req, res) => {
   if (!number) {
     res.send("Lack of Parameter");
   } else if (isNaN(N) === true || Number.isInteger(N) === false || N < 0) {
-    //判斷number變數值是否為數字類型
+    //判斷number變數值是否為數字類型、非正整數
     res.send("Wrong Parameter");
   } else {
     let sum = 0;

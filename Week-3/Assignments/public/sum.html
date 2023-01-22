@@ -27,7 +27,6 @@
       xhr1.onreadystatechange = function () {
         if (xhr1.readyState === 4) {
           const value = JSON.parse(xhr1.responseText);
-          console.log(xhr1);
 
           const h2 = document.querySelector("h2");
           h2.innerText += `${value}`;
@@ -43,7 +42,7 @@
       const form = document.querySelector("form");
 
       form.addEventListener("submit", (e) => {
-        e.preventDefault();
+        e.preventDefault(); //form submit出去後不會轉跳到其他路徑，停留在原網頁！
 
         const parameter = input.value;
         const xhr2 = new XMLHttpRequest();
