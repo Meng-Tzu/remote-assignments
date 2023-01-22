@@ -23,7 +23,7 @@ app.get("/data", (req, res) => {
   const { number } = req.query; //取得query string的內容
   const N = Number(number);
 
-  if (!N) {
+  if (!number) {
     res.send("Lack of Parameter");
   } else if (isNaN(N) === true || Number.isInteger(N) === false || N < 0) {
     //判斷number變數值是否為數字類型

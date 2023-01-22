@@ -4,10 +4,6 @@ Remote_Learning_Assignment-Back-end-Week_3.pdf
 # 模組
 /node_modules
 
-# Package
-package.json
-package-lock.json
-
 # Week-3內的測試用檔案
 /public
 try.js
