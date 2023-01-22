@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum Page</title>
+    <meta name="author" content="Meng-Tzu Tsai" />
+  </head>
+  <body>
+    <h1>This is Sum Page.</h1>
+    <h2>When number is "10", the answer is:</h2>
+    <form>
+      <label for="number">Enter a number to calculate:</label>
+      <input
+        type="number"
+        name="number"
+        id="number"
+        min="0"
+        placeholder="請輸入正整數"
+      />
+      <button type="submit">Calculate!</button>
+    </form>
+    <script>
+      // Get the result 55 from the server
+      const xhr1 = new XMLHttpRequest();
+      xhr1.onreadystatechange = function () {
+        if (xhr1.readyState === 4) {
+          const value = JSON.parse(xhr1.responseText);
+          console.log(xhr1);
+
+          const h2 = document.querySelector("h2");
+          h2.innerText += `${value}`;
+        }
+      };
+
+      xhr1.open("GET", "http://localhost:3000/data?number=10");
+      xhr1.send();
+
+      // Let users enter a number and get results from the server
+      let body = document.querySelector("body");
+      const input = document.querySelector("input");
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const parameter = input.value;
+        const xhr2 = new XMLHttpRequest();
+        xhr2.onreadystatechange = function () {
+          if (xhr2.readyState === 4) {
+            const value = JSON.parse(xhr2.responseText);
+            body.innerHTML += `<h2>-->When number is "${parameter}", the answer is:${value}</h2>`;
+          }
+        };
+
+        xhr2.open("GET", `http://localhost:3000/data?number=${parameter}`);
+        xhr2.send();
+      });
+    </script>
+  </body>
+</html>

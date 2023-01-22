@@ -1,0 +1,21 @@
+# 作業要求
+Remote_Learning_Assignment-Back-end-Week_3.pdf
+
+# 模組
+/node_modules
+
+# Package
+package.json
+package-lock.json
+
+# Week-3內的測試用檔案
+/public
+try.js
+try1.js
+index.html
+
+# Assignments內的測試用檔案
+index.pug
+layout.pug
+test.pug
+try2.js

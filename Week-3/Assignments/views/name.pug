@@ -1,0 +1,14 @@
+doctype html 
+html(lang="en")
+    head
+        title Test Page
+    body
+        header
+            h1 Test Page
+            if name
+                h2 Hello, #{name}!
+            else 
+                form(action = "/trackName", method = "post")
+                    label(for="username") Please enter your name:
+                        input(type="text", name="username", id="username")
+                    button(type="submit") Submit
