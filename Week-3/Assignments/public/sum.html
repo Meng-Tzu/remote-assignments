@@ -21,6 +21,7 @@
       />
       <button type="submit">Calculate!</button>
     </form>
+    <h2 id="result"></h2>
     <script>
       // Get the result 55 from the server
       const xhr1 = new XMLHttpRequest();
@@ -37,7 +38,7 @@
       xhr1.send();
 
       // Let users enter a number and get results from the server
-      let body = document.querySelector("body");
+      const result = document.querySelector("#result");
       const input = document.querySelector("input");
       const form = document.querySelector("form");
 
@@ -49,7 +50,7 @@
         xhr2.onreadystatechange = function () {
           if (xhr2.readyState === 4) {
             const value = JSON.parse(xhr2.responseText);
-            body.innerHTML += `<h2>-->When number is "${parameter}", the answer is:${value}</h2>`;
+            result.innerText = `-->When number is "${parameter}", the answer is:${value}`;
           }
         };
 
