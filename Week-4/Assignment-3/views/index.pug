@@ -5,17 +5,21 @@ html(lang="en")
     body
         h1 Welcome to the Website
         section(class= "signUp") 
+            h2 Sign Up Form
             form(action = "/signUp", method = "post")
-                label(for="email") Please enter your email:
+                label(for="signUpEmail") Please enter your email:
                     input(type="email", name="email", id="signUpEmail" required)
-                label(for="password") Please set up your password:
+                label(for="signUpPassword") Please set up your password:
                     input(type="password", name="password", id="signUpPassword", maxlength="100" required)
                 button(type="submit") Join Us!
-        
+        br
+        br
+
         section(class= "signIn") 
+            h2 Sign In Form
             form(action = "/signIn", method = "post")
-                label(for="email") Please enter your email:
+                label(for="signInEmail") Please enter your email:
                     input(type="email", name="email", id="signInEmail" required)
-                label(for="password") Please enter your password:
+                label(for="signInPassword") Please enter your password:
                     input(type="password", name="password", id="signInPassword", maxlength="100" required)
                 button(type="submit") Sign In!

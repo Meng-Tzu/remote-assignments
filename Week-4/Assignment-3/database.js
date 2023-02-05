@@ -1,8 +1,10 @@
+// 匯入模組
 import mysql from "mysql2";
 import dotenv from "dotenv";
 
 dotenv.config();
 
+// 資料庫的資訊
 const pool = mysql
   .createPool({
     host: process.env.MySQL_HOST,
@@ -12,6 +14,7 @@ const pool = mysql
   })
   .promise();
 
+// Function1: 選取table裡的所有email
 export async function getEmails() {
   const [array] = await pool.query("SELECT email FROM user");
   const emails = [];
@@ -21,6 +24,7 @@ export async function getEmails() {
   return emails;
 }
 
+// Function2: 取得特定email的密碼
 export async function getPassword(email) {
   const [result] = await pool.query(
     `
@@ -33,6 +37,7 @@ export async function getPassword(email) {
   return result[0].password;
 }
 
+// Function3: 匯入新的帳號密碼到table
 export async function createData(email, password) {
   const [data] = await pool.query(
     `
@@ -41,6 +46,4 @@ export async function createData(email, password) {
     `,
     [email, password]
   );
-  // const id = data.insertId;
-  // return getData(id);
 }

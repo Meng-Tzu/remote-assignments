@@ -42,6 +42,7 @@ app.post("/signUp", async (req, res) => {
   const emails = await getEmails();
 
   if (emails.includes(inputEmail)) {
+    // 表示已存在相同的email，導回 home page
     error = true;
     res.redirect("/index");
   } else {
