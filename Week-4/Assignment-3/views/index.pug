@@ -1,0 +1,21 @@
+doctype html 
+html(lang="en")
+    head
+        title Home Page
+    body
+        h1 Welcome to the Website
+        section(class= "signUp") 
+            form(action = "/signUp", method = "post")
+                label(for="email") Please enter your email:
+                    input(type="email", name="email", id="signUpEmail" required)
+                label(for="password") Please set up your password:
+                    input(type="password", name="password", id="signUpPassword", maxlength="100" required)
+                button(type="submit") Join Us!
+        
+        section(class= "signIn") 
+            form(action = "/signIn", method = "post")
+                label(for="email") Please enter your email:
+                    input(type="email", name="email", id="signInEmail" required)
+                label(for="password") Please enter your password:
+                    input(type="password", name="password", id="signInPassword", maxlength="100" required)
+                button(type="submit") Sign In!

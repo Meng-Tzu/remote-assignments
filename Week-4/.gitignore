@@ -1,0 +1,12 @@
+# 作業要求
+Remote_Learning_Assignment-Back-end-Week_4.pdf
+
+# 模組
+node_modules
+.env
+
+# 測試用檔案
+public
+try.js
+app_t.js
+database_t.js
